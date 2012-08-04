@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="horizontal">
+
+    <com.example.stepper.view.VerticalSeekBar
+        android:id="@+id/mixer_channel_one"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content" />
+
+    <com.example.stepper.view.VerticalSeekBar
+            android:id="@+id/mixer_channel_two"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content" />
+
+    <com.example.stepper.view.VerticalSeekBar
+            android:id="@+id/mixer_channel_three"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content" />
+
+    <com.example.stepper.view.VerticalSeekBar
+            android:id="@+id/mixer_channel_four"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content" />
+
+</LinearLayout>

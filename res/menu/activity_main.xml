@@ -15,6 +15,11 @@
           android:orderInCategory="100"
           android:showAsAction="always" />
 
+    <item android:id="@+id/menu_mixer"
+          android:title="@string/menu_mixer"
+          android:orderInCategory="100"
+          android:showAsAction="ifRoom" />
+
     <item android:id="@+id/menu_settings"
         android:title="@string/menu_settings"
         android:orderInCategory="100"

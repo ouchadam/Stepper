@@ -14,10 +14,7 @@ import com.example.stepper.CanStep;
 import com.example.stepper.Grid;
 import com.example.stepper.R;
 import com.example.stepper.Stepper;
-import com.example.stepper.fragment.FragmentFileManager;
-import com.example.stepper.fragment.FragmentGrid;
-import com.example.stepper.fragment.FragmentPads;
-import com.example.stepper.fragment.FragmentTransport;
+import com.example.stepper.fragment.*;
 
 public class MainActivity extends FragmentActivity implements CanStep {
 
@@ -32,9 +29,11 @@ public class MainActivity extends FragmentActivity implements CanStep {
     private FragmentTransport transport;
     private FragmentPads pads;
     private FragmentFileManager fileManager;
+    private FragmentMixer mixer;
 
     private Stepper stepper;
     private boolean isRunning = false;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,6 +74,9 @@ public class MainActivity extends FragmentActivity implements CanStep {
             case R.id.menu_file_manager:
                 replaceFragment(fileManager);
                 break;
+            case R.id.menu_mixer:
+                replaceFragment(mixer);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -91,6 +93,7 @@ public class MainActivity extends FragmentActivity implements CanStep {
 
         pads = new FragmentPads();
         fileManager = new FragmentFileManager();
+        mixer = new FragmentMixer();
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.grid, grid);
