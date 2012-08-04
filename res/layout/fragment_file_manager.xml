@@ -1,18 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/file_explorer_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/file_explorer_parent">
+
+    <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:id="@+id/channelContainer"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+
+        <ImageView
+                android:id="@+id/channel_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/disabled"/>
+
+        <ImageView
+                android:id="@+id/channel_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/enabled"/>
+
+        <ImageView
+                android:id="@+id/channel_three"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/disabled"/>
+
+        <ImageView
+                android:id="@+id/channel_four"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/enabled"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/channelTextContainer"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/channelContainer">
+
+        <TextView
+                android:id="@+id/channel_one_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="loaded sample filename.wav"/>
+
+        <TextView
+                android:id="@+id/channel_two_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="loaded sample filename..."/>
+
+        <TextView
+                android:id="@+id/channel_three_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="loaded sample filename.wav"/>
+
+        <TextView
+                android:id="@+id/channel_four_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="loaded sample filename..."/>
+
+    </LinearLayout>
+
 
     <TextView
-        android:id="@+id/path"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:id="@+id/path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/channelTextContainer"
+            android:layout_alignParentTop="true"/>
 
     <ListView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:id="@+id/file_list_view" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/file_list_view"
+            android:layout_below="@id/path"
+            android:layout_toRightOf="@id/channelTextContainer"/>
 
-</LinearLayout>
+</RelativeLayout>
