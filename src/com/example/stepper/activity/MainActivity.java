@@ -88,6 +88,13 @@ public class MainActivity extends FragmentActivity implements CanStep {
     private void replaceFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.details, fragment);
+        transaction.setCustomAnimations(android.R.anim.fade_in,android.R.anim.fade_out,android.R.anim.fade_in,android.R.anim.fade_out);
+
+        if(!fragment.isVisible()) {
+            transaction.show(fragment);
+        } else {
+            transaction.hide(fragment);
+        }
         transaction.commit();
     }
 
@@ -103,6 +110,7 @@ public class MainActivity extends FragmentActivity implements CanStep {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.grid, grid);
         transaction.replace(R.id.details, transport);
+        transaction.hide(transport);
         transaction.commit();
     }
 
