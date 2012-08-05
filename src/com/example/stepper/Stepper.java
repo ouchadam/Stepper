@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Stepper {
 
-    private final int tempoInMs = 500;
+    public static int tempoInMs = 250;
 
     private int stepPosition;
     ArrayList<Playhead> playheads;

@@ -33,6 +33,7 @@ public class MainActivity extends FragmentActivity implements CanStep {
 
     private Stepper stepper;
     private boolean isRunning = false;
+    private FragmentSettings settings;
 
 
     @Override
@@ -77,6 +78,9 @@ public class MainActivity extends FragmentActivity implements CanStep {
             case R.id.menu_mixer:
                 replaceFragment(mixer);
                 break;
+            case R.id.menu_settings:
+                replaceFragment(settings);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -94,6 +98,7 @@ public class MainActivity extends FragmentActivity implements CanStep {
         pads = new FragmentPads();
         fileManager = new FragmentFileManager();
         mixer = new FragmentMixer();
+        settings = new FragmentSettings();
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.grid, grid);

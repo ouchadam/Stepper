@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tempo_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+            android:text="Tempo"/>
+
+    <EditText
+            android:id="@+id/tempo_edit_text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="Enter new tempo"/>
+
+    <Button
+            android:id="@+id/button_save"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Save settings"/>
+
+
+</LinearLayout>
